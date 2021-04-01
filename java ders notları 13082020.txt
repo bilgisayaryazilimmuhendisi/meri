@@ -1,0 +1,1236 @@
+Levent GÜREN
+1qaz@2wsx
+levent@infopark.com.tr
+https://www.dropbox.com/s/8mleq378523chpr/odevler.zip?dl=0
+http://collabedit.com/sgehm
+
+JVM -> JRE,
+	JDK
+
+Java Özet
+ufak mikroiþlemciler çalýþþsýn diye üretildi o yüzden platform bagýmsýz çalýþsýn olarak tasarlandý.JVM
+
+jvm alýyor kodu class a mikroiþlemcilerin anladýgý dile çeviriyor
+
+ilk baþlarda yavaþ deniyordu þimdiler derleme ve çalýþtýrma hýzý nerdeyse ayný
+
+jre java runtime envir çalýþtýrmak için gerekli kütüphaneleri oldugu 
+
+jdk  java development kit
+
+class aslýnda þablon ona bakýlarak kopyalar oluþturuluyor aslýnda classtaki kodlarýmýz çalýþtýrýlmýyor
+
+
+
+int byte short long 
+4   2	  2byte 
+
+double float(hýzlý çalýþýr ama yer kaplar 4 byte yer kaplar çok tercih edilmiyor)
+8byte  
+
+ sonuna L koyuyoruz long tipinde olsun diye
+
+türkçe karakter sorunu
+general altýndadaký
+ýso 8859-9 yazmalý
+
+proje yaratýrken class baþ harfi büyük
+
+
+
+ctrl f11 run
+
+
+ctrl d
+
+alt shift x z
+
+source format 
+
+
+window preferences
+****save
+java editor 
+save actions
+
+format source code
+organize imports
+
+her save ettiðimde düzenleyecek
+
+
+****format 
+java code style formatter
+
+eclipse built in java yaz
+edit de
+line wrapping
+line width
+1200 yap
+
+
+Date çevirip stringe sonra onu parse etmek yerine
+date tipindeki veriyi date tipindeki deðiþkene oku...
+
+
+1/ 1 /1901 tarihi yerine null yazmalý çünkü her tarih mümkün ama null mümkün deðil
+1/1/1801 de mümkün :D sgk projesi cobol da null ise okumaya çalýþýrken hata alýyorsun her defasýnda null mý diye kontrol etmen gerekyiyor
+9 yýllýk projeye sebep oldu
+
+primitiveler null olmuyor
+her primitivin classýný yazmýþlar int null olamaz ama Integer için wrapper class dediðimiz classlar yazýlmýþ
+Integer classý null oluyor
+
+
+modifier eriþimleri;
+
+		sýnýfýn kendisi		ayný paketteki diðer sýnýflar     türeyen sýnýflar       diðer sýnýflar
+public 			+				+			+			+
+protected		+				+			+			-
+default			+				+			-			-
+private			+				-			-			-
+
+
+
+
+
+deðiþkenlerde overriding yok 
+6 yaþýnda 12 saat piano 
+7 yaþýnda klasik müzik 
+asým can gündüz günde 20 saat çalýþma dünya çapýnda 3.lük
+
+ders almaya alýþma diye bir þey va antrenmanlýysanýz 5 saate kadar odaklanabilirsiniz
+
+
+ortak tip tanýmlama
+Interface tanýmlama 
+test(Tip1 p)
+ikisinde de olan ortak method tanýmladýk
+
+
+tersi 
+abstraction
+
+
+servlet request response 
+resquest geldiðinde çalýþacak olan class servlet classýmýz olmalý
+hazýr classtan türeyecek
+biz de kendi clasýmýz ServletBase yapýp superclasstan gelen doProcess methodunu çaðýrdýk
+doGeti çaðýrdýk
+
+servletBase
+/         \
+servlet1 servlet2
+
+abstract class ServletBase
+
+
+securerandom classý math rand daha güvenliii***
+
+
+bir class tek bir iþ yapmalý bir method tek bir iþ yapmalý
+hem onu hem onu yapýyor derseniz oop mantýgýna aykýrý
+
+
+
+methodu sec sað týkla refactor extract method seçeneði çok akýllý çalýþan bir özellik
+
+
+
+
+getset
+altshift r sað tuþ alt tuþ seç enter
+
+anne-babanne örneði 08072020
+ADIMLAR;
+
+jdk jvm main
+çalýþtýr tüm staticler oluþturulur,,,,
+
+STATÝC CLASS HAFIZAYA YÜKLENDÝÐÝ AN
+CONSTR ÝSE HER ÝNSTANCE yaratýrken oluþur çalýþýr
+
+program baþladý
+ babanne instance oluþtur
+
+bütün classlar bir kereliðine diskten hafýzaya yükler ilk kullandýgýmýzda yükler
+
+static blok sonra çalýþtýrýlacak önce extends anne oldugu için anne yi yükleyecek önce
+
+anne clasýndaki staticler 
+anne yüklenecek iþi bitecek sonra babannenin static blogu çalýþtýrýlacak
+iki static blogu yazmak tavsiye edilmez ikisini birleþtirip tek static tavsiye edilen
+aslýnda anneden önce de object yükleniyor hep yapýyor
+
+türediðimz class super ile kendi classýmýza this ile eriþecegiz
+
+
+piyasada .net bilen yok biliyorum diyenler kolay ksýmlarýný biliyor
+.net ekstra pratik yöntemleri var
+java biliyorum diyen bunlarý bilmek zorunda
+
+//alt shift s o conts
+	// alt shift r get
+
+
+
+sayýsýný bilmediðim arrayleri nasýl oluþtururum
+deðiþken boyutta array gibi davranan classlarý nasýl oluþturabilirim
+verileri sýralý saklamak zorunda mýsýnýz
+sýrasýzý daha maliyeti kolay
+sýralý saklamaya liste
+sýrasýz saklamaya küme deniyor
+objeleri bir etiket bilgisi ile saklamak buna da map deniyor
+odaya paket gönderdiðiniz idüþün sonra da senden o paketi isteyecekler ozaman üstüne yaz yani etikeltleyip rafa koyuyorsunuz burda sýra ve küme yok burda
+etiket bilgisi saklama var buna da map deniyor
+üç kavram da boþ yaratýlýp ekledikçe eleman sayýsý boyutunda esnekler
+bunlar için 3 class yazalým bunlarýn da ortak classlarý olsun demiþler
+bunlar ayný anda ayný yere eriþirseler sorun çýkar
+eþ zamanlý kodu ikisini de bir arttýrmak gerekir
+erþimi sýraya sokmak gerekiyor
+eriþen varsa bekleme yapmak iþaret koymak gerekiyor
+maliyetli ama ihtiyac var
+eþ zamanlý eriþeme uygun kodlara thread safe kodlar deniyor
+thread safe yaparsam yavas çalýþýyor yapmazsam güvensiz oluyor
+o zaman biz bunlarý class yapmayalým interface yapalým
+ne yapacagýný söyleyelim
+ama ne yapacagýný o seçsin
+
+methodlarýn listesi için interface yapalým
+
+üç tane interface çýkmýþ ortaya
+Collection(bunlarýn super interfacei ortak methodlarý var bunlar için)
+List Set Map Queue 
+bunlarýn hepsi interface
+
+bunlarýn bir de implementation class larý var ihtiyac oldugunda kullanýlýr
+Collection
+List          Set       Map         Queue
+Arraylist     HashSet   HashMap     FÝFO LÝFO
+LinkedList
+Vektor
+
+
+List içindekileri sýralý
+set sýrasýz ama hýzlý
+map etiketle saklar
+
+hepsinin de ortak özelliði içine obje attýkça büyeybilmesi
+bunlar classtýr array deðil
+sout yaz ctrl enter
+
+deðiþkene sag týkla refactor rename sonra enter tüm deðiþkenler ayný anda deðiþti
+
+
+ortak tip olarak interface kullanýyorduk farklýlarý kýyaslamak için
+
+
+obje tipinden bagýmsýz interface ile sýralama kýyaslama yapabildik
+
+09072020
+
+TEKRAR ÖNEMLÝ
+3 dk yarým saat bir hafta 1 ay sonra yapýlmalý 10 tekrar hepsi bir arada olmaz Kuraný Kerim ezberleyenler bu tekrarlarý çok iyi biliyor ve yapýyorlar ve bu þekilde herkes ezberliyor uðraþýn diye ödev veriyorum yapasýnýz diye deðil teml amaç uðraþýp tekrar etmeniz ve aklýnýzda kalmasý
+
+
+dün bir dizi oluþturup bunu sýralamak istedik
+
+önce isim ve yaþ barýndýran get setli öðrenci sýnýfý oluþtururduk
+yaþýný yaratýrken oluþturan bir cons yarattýk
+yedi öðrenci yaratýp arraye koyduk,
+ve bir sýralama methodu yaratýp öðrencileri sýralayýp ekrana bastýrdýk
+öðrenci clasýý ile to string ile ordan yapýlýyor kýyaslayp formatlama iþi
+masa objesi yarattýk 4 masa yarattýk yine ayný method ile masalarýmýzý sýralayýp ekrana bilgilerini bastýk
+burdaki esas hem masa hem ogrencileri sýralayan bir method yazdýk booble sort ile 
+kýyaslayýp en baþa alarak diziyi sonuna kdar kýyaslayýp sýraladýk
+iki sýkýntý 
+bir parametre tipi ne vericez
+ogrenci mi masa mý 
+object verirsek ikisini de kýyaslayabiliriz
+ikinci nasýl neye göre kýyaslýcaz
+hangisi daha ufak nasýl bilcez
+burda object dediðimizde sadece object clasýnda ortak olan methodlarý kullanabilirim ve orta ortak yok bu yüzden
+ben ikisini de kýyaslayan kýyasla adýnda ortak method yazdým
+iki clasta ortak olan methodu kullanabilmek için ikisinde de ortak olan bir tip yazmam gerekti ve interface yazdým
+ikisinin tipini ortak üretmem gerekiyordu kýyaslanabilir adýnda bir interface yazdým ikisine de ortak olan kýyasla methodunu yazdým içine. ne döndürcek object
+implements kelimesi ile masa ve ogrenciyi iliþkilendirdim
+hem masada hem ogrencide object tipinde aldým methodu
+class cast tip dönüþümü yaparak object geliyor ama ogrenciye cevirerek gerçek tipini cast ettim kýyasla methodunda. (Ogrenci)o
+ayný þeyi masa için de yaptým
+masa da geleni Masaya çevirdim. Object tipinde parametre alan methodu . (Masa)o; class cast exception hatasý alabiliriz masa gelmezse...
+
+stringleri artý artý ile birleþtirmiyoruz çünkü çok fazla ara string objesi oluþuyor
+
+string buffer daha yavas eþ zamanlý eriþime uygun yazýlmýs thread safe 
+string builder kullandým tostringte çünkü 
+
+objelerimi interface ile iliþkilendirdim hala eriþemiyorum ama object tipinde olunca hala çaðýramýyorum interface tipinde eriþmem gerek
+(Kýyaslanabilir[] liste) burasý önceden object tipindeydi sonra ogrenci ve masa tipinde aldým þimdi interface tipinde alýyorum
+implements Kýyaslanabilir diyerek masa classýnda onu interface ile iliþkilendirebilirim
+
+yüksek basamaklý sayýlarý tutmak için BigDecimal BigInteger
+Vektor
+
+
+Beanclasslarý : 1 
+bütün deðiþkenleri private olcak
+2deðiþkenlerin gerekiyorsa get set olacak
+3 default const olcak yani parametresiz de alýnabiliyor olcak
+4 içinde iþ mantýðý olmayacak kendini kaydetmeyecek ekrana yazmayacak okumayacak sadece veriyi saklayacak sadece tip olarak kullanýlacak
+Formun içindeki bilgileri deðiþkenlere atatýgýmýz bir classýmýz olcak o clasýý biyerlere yollayacaðýz
+Lombok isimli bir proje geliþtirmiþler bean classlarýný yaratýrken bunlarýn get setleri olsun diyorum to stringi olsun diyorum bunlarý düzgün bir þekilde kendisi yazýyor bunlarý kodun içinde yazmam gerekmiyor yazýlmýþ gibi çalýþýyor
+Bunlarý yazmýcam classýn içinde compile anýnda hafýzaya ekleyip compile edecek ben burda görmicem bunun için ide’ ye ekleyeceðiz lomboku 
+
+**************************************PROJEYE SAÐ týkla build path libraries add external jars applyyy
+4 yýldýr var bu
+ ogrenci classýndan get set herþeyi sil 
+@Getter yaz ctrl boþluk yap
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+
+alttakileri kendi ekledii
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+
+
+
+****************
+@ToString(callSuper = true)
+@ToString(exclude = { "yas" })
+böyle þeyler de var
+
+
+
+
+
+////elimizdeki objeleri kýyaslayacak sýrala methodunu 
+////iki yöntem objenin kenidisine yaz objenin içine yaz methodu sýrala ile ayni tipteki objeleri kendilerini kýyasla iki objeyi kýyasla
+////bunun için interface yazdým Kýyaslanabilir
+///bu sýrala ile bu interface ile iliþkilendirip içine her objenin içine sýrala yazýp istediðim kadar objeyi sýralayabilir oldum
+///ama sýkýntý hem yaþa hem ada göre duruma göre sýralamak gerektiðpinde tüm objeleri ayný mantýkta sýralamk gerektiðinde iþe yarýyor bu yöntem deðiþmiyor duruma göre yapacaksak bu yöntem olmaz
+//baþka bir classa ihtiyacým var kýyaslama yapacak olan kodumdaki iki objeyi alacak yeni bir interfacese ihtiyacým var 
+////ikinci yöntem
+////Kiyaslanabiliri sildik 
+// masa ve ogrenci artýk hiçbiþeyle iliþkili deðil bean class haline geldi
+//Kiyaslayici interface yazdýk içindeki kýyasla methodunu kullanacagýz.
+//kiyaslayici.kiyasla(liste[i], liste[j]>0)
+///agýrlarý için ayrý class yazýcam yaþlarý için ayrý class yazýcam ve bu claslarýn hepsini bu interface üzerinden kullanýcam
+//sirala(ogrenciler, new OgrenciKiyaslaYasaGore());
+
+
+		//// birden fazla deðeri saklayan iki yapý array ve list var bizde
+		//// birden fazla objeyi sýralýcaz
+		//// array basit lakðin eleman sayýsý belli
+		//// list primitive ile çalýþamýyor class olmak zorunda daha yavaþ daha çok bellek harcýyor
+		//// ama eleman sayýsý esnekliði var
+
+
+
+
+//// STRÝNG SIRALAMASIN UNUTMA COLLATOR dan yardým alýyoruz onun dýþýnda böyle onun örneðini yapmýþtýk
+		///// aþagýda tersten sýraladýk kendi yazdýgým classlar için bu yöntemi kullanacagým
+		////// hazýr claslarýn hepsinde var compareTo kendi classlarýmýza eklemeliyiz
+		/////
+
+		//// comparator kýyaslayýcý class hangi class için Integer class
+		Collections.sort(sayilar2, new Comparator<Integer>() {
+			// ctrl boþluk yapýnca compareTo yok diyor
+			@Override
+			public int compare(Integer o1, Integer o2) {
+				return o2.compareTo(o1);
+			}
+		});
+		for (Integer i : sayilar2) {
+			System.out.println(i);
+		}
+
+
+
+gelenmeryem@gmail.com
+gelen.mery.em@gmail.com ayný þey sadece gmailde böyle noktalarý kaldýrýr
+
+
+
+
+/////////////////////////////////////////
+10.07.2020
+
+public class Calistir {
+//	public static void main(String[] args) {
+//		int sayi1 = 4;
+//		int sayi2 = 0;
+//		int sayi3 = sayi1 / sayi2;
+//		System.out.println(sayi3);
+//	}
+//}
+/////exception fýrlattý denir
+
+//// kim yakalayacak ? fýrlatma yakalama ile beraber olan bir kavram
+///yakaladýgý yeri bulursa java oraya parametre göndererek yakalandýgý yere atlýyor ve ordan çalýþmaya normal þekilde devam ediyor//
+///satýr 7 ye gidiyor ve benim hatamý yakalayan kod var mý diye oraya bakýyor 
+/// JVM yakalarsa hatayý ekrana basar ve biter bizim kodumuz yakalarsa ordan devam eder
+
+////STRÝNG SIRALAMASIN UNUTMA COLLATOR dan yardým alýyoruz onun dýþýnda böyle onun örneðini yapmýþtýk
+	///// aþagýda tersten sýraladýk kendi yazdýgým classlar için bu yöntemi kullanacagým
+	////// hazýr claslarýn hepsinde var compareTo kendi classlarýmýza eklemeliyiz
+	/////
+
+	//// comparator kýyaslayýcý class hangi class için Integer class
+
+	public static void main(String[] args) {
+		int sayi1 = 4;
+		int sayi2 = 0;
+		try {
+			int sayi3 = sayi1 / sayi2;
+			System.out.println(sayi3);
+		}
+
+		catch (ArithmeticException e) {
+			System.out.println("hata oluþtu");
+		}
+		System.out.println("bitti");
+	}
+}
+	/// Throwable tüm exceptionlar burdan türüyor
+
+	//// error(düzeltilemez mesela bellek yetmezliði) ve exception (düzeltilebilir)
+
+// Ben for çalýþýrken göreyim 500ml beklesin istiyorum
+
+Threead.sleep(ms)
+
+
+	// boþ döngüler os.yi yorar ýsýnýr pili tüketir
+	// error(düzeltilemez mesela bellek yetmezliði) ve exception (düzeltilebilir)
+	// runtimeException olmayanlarýn ismi catchexceptiondýr bunlarda mutlaka yakalama kodu yazmalýyýz
+	// java ve c# virüs yazmak biri os yazmak olmuyor alt seviyede kendini saklayamadýgý için jvm ve .net olmadan olmadýgý için 
+
+System.err.println("baþladý");// kýrmýzý
+System.out.println("baþladý");
+
+
+// Öðleden sonra; son saate katýlamayacaðým
+////exception classý seriazlizable iþlemleri yapacak þekilde ama versiyon numarasý yoksa napýcaz?
+//versiyonu kontrol edemediði için uyarý veriyor
+biz de üzerine gelip add generated  deyip serialVersion sayý deðerlerini atadýk:
+////bu class üzerindeki her deðiþiklikte bu numarayý yeniden üreteceðiz
+// iki sunuculu iþlemleriniz yoksa seriazble iþlemlerine ihtiyacýnýz yoktur 
+////ama bu hata exception class seriazlble oldugu için
+
+
+
+///ne kadar karmaþýk olursa olsun problemi alt basit adýmlara bölelim
+// aþama aþama inelim önce ilk yapacaklarýmýzý düþünelim
+//bölmek objelere ve metodlara ayýrmak çok önemli
+//bu arada ben bunu yazarken yardýmci classý varmýþ gibi düþündüm kelimelere ayýr ve hecelere ayýr metodu varmýþ gibi düþündüm ilk baþla classýndan baþladým yazmaya
+
+
+
+///mikroiþlemci registere 5 milisnlik kaydediyor ve diðer 2. geçiyor 5 milisaniye daha çalýþtýrýyor tekrar duruyor o andaki deðerini kaydediyor
+////elimizde 10 program varsa 5 5 5 bölerek durarak hýzlýca bizim farketmediðimiz hýzda tüm programlar ayný anda çalýþýyor hissi veriyor 
+/// 2 çekirdek varsa ayný anda iki program çalýþýr ama bize daha fazlaymýþ gibi gelir 
+///daha hýzlý öncelikli çalýþmasý gerek programa 5 deðil 10 milisaniye ayýrýr
+//tüm bunlarý iþletim sistemi yönetiyor
+/// ben listeye iki program koyamam ama os'nin anladýgý dilde jvm bunu yapabilir
+///themafor thread(method) process(class) applications katmanlarý var
+
+///listeye atýp içinden çekme metodunda rasgelelik hýzý gittikçe yavaþlamaz hep ayný kalýr güzel yöntem tekrar incele
+////SayýTahmin
+
+
+////window preferences java editor templates new 
+//System.out.format("${cursor}");
+//artý yapmaktan ara stringler oluþturmaktan kurtariyor bizi
+
+//volatile eþ zamanlý eriþimleri sýraya sokmaya yarar gereksiz kullanýrsanýz programý yavaþlatýr
+	private static volatile int deger = 0;
+///ya kod blogunu ya da methodu eþ zamanlý eriþilemez yapmalý  synchronized
+//DÝÐER yöntem ise eþ zamanlý eriþilemez yapmak için
+///threadleri kullanmak zor ama kullanmalýyýz debug etmek de zor anlamý yok çünkü 
+
+
+
+///threadin join dediðimizde en son bitmesini bekliyoruz
+//////read modify join
+
+
+
+//threAD örneði kullanýcýdan sayý isteyelim birden sayýya kadar ekrana toplamýný basalým
+
+//final deðiþkeni deðeiþtirilemez final yazmasan da deðerini deðiþtirmemen gerek anonymousta 
+//local yerine class deðiþkeni ve get setini kullanarak eriþebiliriz hata vermez
+
+
+///lambda ile anonymous clasýý baya kýsalttýk
+////çaðýrdýðým yerde interface tipine bir parametre alýyor olmalý
+ çalýþmasý için
+///kullandýgýmýz interfacelerde tek method olma þartý var
+	System.out.println(islemYap(10, 20, -> sayi-sayi2));
+* gönderirsek çarpma yapar
++ gönderirsek toplama yapar
+
+11082020
+///thread ayný anda paralel iþlem çalýþtýrmaya yarar kaç çekirdek varsa 4 iþlemi 4 çekirdeðee bölebiliriz
+100 çekirdekte thread kullanmazsanýz bir çekrdekte sýnýrlý kalýrsýnýz
+makine yavaþ deðil siz sýnýrlarýný kullanmýyorsunuz
+
+///start run çalýþsýn paralel iþlem yapacagýmýz zaman run içine yazarsak 
+main fonksi içine yazýlan iþ 
+ve bizim yarattýgýmýz iþ
+kendi thread classýmýzla runý ezdik benim yazdýgým run çalýsýsn
+2. yöntem thread inst yaratýrken parametre olarak kendi classýmýzý veriyoruz kendi runýndan benim runýmý çaðýrýyor
+
+runnable interfacei ile 
+bu threadlerin startlarý threadin içindeki runý çaðýrýyor 
+
+
+/////25bin resim silme sorusu
+threadin oluþmasý run çalýþmasý diskte silme iþleminde ssd yoksa tek kafalý falan ise avantaj saðlamýþ olmuyorsun
+matematik iþlemlerinde bölmek avantajlý ama disk iþlemlerinde avantajlý mý bakalým
+networkte avantaj saðlamz ama hesaplama webservis ve veritabaný iþlemlerinde avantaj saðlýyor
+web projelerinde uzun sürecek raporlarda avantaj saðlar thread
+////////
+bazý kod parçalarýnýn ayný anda çalýþmasýný istemiyoruz
+banka 3 para çekme iþleminin yapýlmasýný göze alamýyor buna transaction deniyor kitliyor 
+biri okudugunda kitlesin diðerleri beklesin
+sýraya girerek çalýþtýrsýn bunlarý da synchronized ile yapýyoruz fonksiyonu ya da kod blogunu
+baþkasýnýn girmesini engelliyor iþe bitene dek
+bunlar hep extra iþlemler ihtiyacýmýz yoksa yavaþlatýyor
+/////
+web projelerinde thread örneði yaparýz not alýn
+
+
+///////////////////
+ben ortak iþlem yapan bir method yapmak istiyorum hiyerarþik iliþki varsa üstekini yazýnca gelir ama objeler arasýnda hiyerarþik iliþki yoksa interface tanýmlýyorum interface tipindeki parametretyi gönderip çaðýrýrýz
+
+
+/////////
+interface içinde bir method tanýmý olacak ki lambdayý kullanabilelim 
+///////
+lombok kullanmak için jarý yükle eclipse kapat aç
+ve projeye build path configure build path diyerek add external jars basarak kur 
+sonra kullanýrke
+
+///tek metoddan olyuþsan interfacelere functionAL DENÝR
+içine iki metod yazýlmaz funtionalInterface
+
+
+/////funtional programming
+/////hazýr interfacelerde var comsumer predicate falan
+
+
+
+
+FÝLE  ÝMPORT GENERAL EXÝSTÝNG PROJECTS ÝNTO WORKSPACE
+copy projects into workspace
+
+12082020
+MYSQL kurulumu
+bankadaki hesap no 3 colon üçü birden pk olmalý üçü birden uniqliði saðlýyor
+
+uk uniq demek pk ile ayný aslýnda ayný emaile sahip baþkasý olamaz bzim pk hangisi o mu bu mu hayýr herhangi biri olabilir örneðin tc seçiyoruz ama email de seçebilirdik email uniq olarak kaldý 
+
+
+null null'a eþitminin cevabý oracleda nulldýr yani o da bilinmez. true ya da false olmaz
+uniqlik fk için null olmayan deðerler için geçerli
+oracleda null bilinmeyen deðer tüm kurallar null olmyan deðerler için geçerli
+sql server uniq deyince bir null yapabiliyorsunuz ikinci nulla izin vermiyor
+
+auto increment genereted seçili
+oluþtur tabloyu
+INSERT INTO `harita`.`personel` (`tcno`, `adi`, `soyad`) VALUES ('27503404128', 'Meryem', 'Gelen');
+
+
+üç nokta select working set new seçili projelerin görünmesi için
+
+////
+
+javada veritabanýna baðlanmýþ için gerekli interfacelerin kümesi için jdbc driver inidirip yükleyecegiz
+biz sadece intten driver indircez
+jdbc jar indir buld path confi build path add external jars apply
+
+DriverManager.registerDriver();
+DriverManager.getConnection("url","root","");
+DriverManager.getConnection("jdbc:mysql","root","");
+DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "");
+
+///////
+
+user and privileges add entry
+
+
+
+
+
+alt shift s get set içinnnn 
+tos tostring
+////////////
+connection aç kapa uzun ve maliyetli her sorgu için bunu yapmak yerine bir conn açýp 15 sql gönderip iþimiz bitince kapatmak daha mantýklý
+
+/////java ile yazýlmýþ virüs yok bana esneklik saðlamýyor hepsi c ile yazýlmýþ
+
+13082020
+
+///en iyi yöntem önce bean classlarý yazmak aþaðýdan yukarý yazmak ihtiyaçlarý çýkarýp
+1 personel classým var bean class, 2 veritabaný iþlemleri yapacagým personel db classým olcak
+
+ilk request(istek) geldiðinde proje çalýþmaya baþlar ---> çalýþan koda servlet denir. 
+
+servletin görevi 
+class tek bir cümle ile söylenebilecek iþi yapmalý 
+hem onu hem onu yapýyorsa üçe böl tek tek yapan kodu yaz.
+kim istek yapýyor client
+cevap response 
+bi de sql çalýþtýrýyor web servis çaðýeýyor diskteki dosyayý caðýrýyor hepsini yapmamalý servlet
+request response servletin iþi için yeter bi de iþ classý çaðýrýyor business class
+tüm yazacaklarýmýzý business classa yazacagýz 
+iþ classý tüm iþlemleri yapacak classlarý çaðýracak
+bi de db iþlemleri yapacak clasý çaðýrýrýrz
+bu þekilde iþleri baþka classlara yaptýrarak ÇOK KATMANLI MÝMARÝ 3 katmanlý elde etmiþ oluyoruz
+biz bu þekilde db classlarý baþka projeye kopyalayýp kullanabiliriz mesela baðýmsýz oluyor hepsi 
+bu çok katmanlý mimariye MVC 
+model view controller deniyor
+model bean katmaný
+view front end katmaný
+controller business db katmaný
+bean classlarý arasýndaki haberlesmede kullanýlýyor her katmandaki haberleþmede kullanýlacak
+
+ekran içine iþ kodu gömme diyor
+
+asp sayfalarý view 
+
+büyük projelerde servletler business classlar dbler bean classlarý hepsi birden fazla
+bunlar için paket yaratacagýz 
+personel.servlet
+personel.business
+personel.db
+personel.bean
+gibii
+ikinci yaklaþým servleti baþa yazmak
+servlet.personel
+business.personel
+.
+.
+////////////////
+aslýnda üç classa ihtyacm var
+personel(bean)
+personelDB
+Menü
+
+çalýþtýr
+//////////////////////////
+
+DBBase.java
+	/// string olarak adýný verdiðimiz xlassýn ismini oluþturan instance new Driver ile ayný þeyi yapýyor
+	//// kendilerini DriverManager a tanýyor instance yaratýp siliyor hafýzaya yüklüyor static blogu ile kendini tanýyor mysql baðalntýsý görünce hangi class oldugunu
+	// sadece çalýþýrken baksýn compile etmesin diye bu hale getirdik sunucuya aktarýnca sunucunun librarysinde var projeden silsem de hata almýyorum
+	// kesin çalýþsýn diye connection aldýgýnýz classýn üstüne yazýyoruz
+	static {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static Connection connection;
+// bunun üzrinde saklarsak devamlý yeniden con aç kapa yapmayýz
+/// static yapmazsak her biri için instance yaratmak gerekiyor üç conn oluþturuyor
+// bida bidaa con ben bitane olsun istediðim için instancedan baðýmsýz static bütün proje bazýnda birer tane oluþruyuor
+// üç tane bile conn oluþturacak olsa null olmayacagý için ifin içine girmeyip yeniden oluþturmadan olaný kullanacak
+
+	protected Connection getConnection() throws SQLException {
+		if (connection == null) {
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/harita?serverTimezone=Europe/Istanbul", "root", "");
+		}
+		return connection;
+	}
+////connectioný kapatacak olan koda ihtiyacým var closse
+	///// deðiþken static oldugu için heryerden eriþebiliyorum instancedan baðýmsýz yapabilirim bu yüzden protacted static
+	/// resultset ve statemant larýn kapatýlmasý için olnkarý da ekleyelim
+
+protected void close(ResultSet rs, Statement stmt) {
+		try {
+			rs.close();
+		} catch (Exception e) {
+		} finally {
+			close(stmt);
+		}
+	}
+
+protected void close(Statement stmt) {
+		try {
+			stmt.close();
+		} catch (Exception e) {
+		}
+	}
+
+protected static void closeConnection() {
+		try {
+			connection.close();
+
+		} catch (Exception e) {
+
+		}
+//// hata kodlarýný almadýk gerek yok
+	}
+}
+
+///////////////////////////////////////////////////
+
+kodu tara sað týkla refactor extract method diyerek akýllý halde methodlaþtýrabilirsiniz.
+
+sað týkla surround with diyerek otomatik trycatch otomatik for vs yapar
+
+create new file 
+ayarlar.properties
+
+
+////parametreleri ini xml properties bu tip dosya tipleri ile satýr bazlý saklayabiliriz.
+////streamler byte byte veriyor hatta 
+////properties bunlarý yorumluyor
+//dosyaya eriþmek için javanýn clashpathlerinde arýyor  getClassLoader 
+//getResourceAsStream dosyanýn yerini 
+bunlar genellikle util utility aldýnda saklanýyor 
+
+stmt = conn.prepareStatement("insert into personel(tcno, adi, soyad) values(?, ?, ?)");/// güvenlik açýgýný önlemek için deðerlerini içine almayým soru iþareti koymalýyýz
+			stmt.setString(1, personel.getTcno());/// böyle yaparsak sql injection önüne geçmiþ oluruz hepsini parametrik yaptýk.
+	
+
+////////////////////// JAVA WEB
+JEE web projemizi server üzerine koymaya deployment deniyor
+open perspective javaee
+server ekleyip tomcat kur
+
+
+sað týklayýp yeni proje deddiðimizde farklý perspectifte olduðumuz için web projeleri öeneriyor burda yoksa other derdik
+
+
+neden dinamic bazý yerlerin deðiþken olamsýný istiyorum sayfada 
+static olanlar html olarak kaydeden her zaman birebir ayný gösterir týklayýnca
+biz her çalýþtýrdýgmýzda farklý biþey gelmesini bekliyoruz
+
+//////////////////////////
+http://localhost:8080
+: konarsa devamýna port yazýlýyor yazmazsak http göre default degeri var http 80
+bizim sunucumuz 80 deðil 8080 de çalýþtýgý için yazmalýyýz
+ama sunucumuzdan 80 yaparsak 80 üzerinde çalýþýr
+bizim bilgisayarýmýzda gerçek snucu olabileceði için çakýþmasýn diye 8080 yapmýþlar çünkü amacýmýz test yapmak
+/ devamýna biþey yazarsak dizin folder deniyor buna context path adý veriliyor / proje burasý projemizin root u baþka biþey yazarsak öyle bir proje bulunamadý uyarýsýný veriyor 
+
+!!!!  SERVLETS
+ya bir classtan türetmeli ya da bir interface ile iliþkilendirmeliyiz 
+servlet clasýmýzý extends HttpServlet istek geldipðinde service çalýþýyor ezersek bizim yazdýgýmýz çalýþýyor ama biz ezmeyecegiz override etmicez bu service get host delete post gibi hangi tipte istek yapýlmýþsa request içindek tipi buluup doGet doPost çalýþtýrýyor biz servisi ezmek yerine metodlarý eziyoruz doPostu ezip doGeti ezip bunlarý çalýþtýrýyoruz
+biz genelde doGeti ezip kendi yazdýgým doGeti çalýþtýrýyorum.
+adress satýrýna adresi yazýp basýnca bu get tipindeki requesttir doGeti ele alýr.
+doGet yazýp boþluga yazýp herþeyini override ettik 
+superclasstaki dogeti çaðýrmýþ sildik
+ben istediðimi yazýcam
+request istekle ilgili response cevapla ilgili þeyleri saklýyorz response objesi üzerindeki getWriter 
+
+httpservlet de serializebed bir class onun içinde de seriz deðiþkeni olmalý.
+kodlar farklýysa uyumsuzluk oluþuyor olmamasý için her deployment deðiþkenin deðerini rasgele deðiþtirmeliyiz
+class adýndaki uyarýya týkla 
+add default dersen 1 yapar onu yapma.
+web.xml içine servlet
+servlet tagi servlet amacýyla yazýlan classlar
+servlet mapping ne yazýlýrsa iliþki kuracagým
+url pattern test
+http://localhost:8080/IlkWebProjesi/test
+proje build path configure build path context path içinde web project settings 
+
+///////////////
+
+
+
+add generated serial version ..
+
+//////////
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.xhtml</url-pattern>
+		<url-pattern>/test</url-pattern>
+	</servlet-mapping>
+/////////////
+clasý yaratýrken superclass kýsmýndan browse ile http servleti seçebiliriz
+
+
+biz bir süre sonra web.xml kullanmayacagýz annotation kullanacagýz
+
+
+
+servlet yarat sag týklayarak editle getPost ve cons kaldýr 
+
+bizde annotation yok web.xml kullanýyor
+
+
+javanýn deploymentý yavaþ diðer dillere göre sunucuya  yüklenmesi
+ 
+JSP java servlet içine html gömmek zor demiþler ortaya JSP deðiþ 
+
+html kodunu yazýyoruz o servleti kendi yazýyor otomatik
+
+jsp sayfalarýnda türkçe harf sorunu window preferences jsp turkish 
+
+///////////
+
+jsp içine java kod uyazdýrmak istiyorsam <% %> bu kod çalýþmýyor servlet çalýþýyor yine sonunda 
+http://localhost:8080/DenemeWebProjem/ad.jsp
+jsp zaten servleti kendi oluþturacak ad.jsp yeterli
+
+
+<body>
+jsp sayfasýndan merhaba </br>
+<%for(int i=0; i<100;i++){ if(i%2==0){ %>
+
+<%=i %><br/>
+
+<%}} %>
+</body>
+
+///////////////////////
+sizin bilgisayarýnýzda sizinle ilgi bilgileri saklarým hangi username vs için clientlar saklar
+siteme kaç kiþi girdiðini server saklar
+////
+<html>
+<head>
+<meta charset="ISO-8859-9">
+<title>Insert title here</title>
+</head>
+<body>
+<%!int sayac=0; %>
+<% sayac++; %>
+<%=sayac %>
+</body>
+</html>
+
+<%!int sayac=0; %>/// /artýk yerin önemi kalmýyor burasý classýn dýþýna alýnýyor static ben bu þekilde method da yzabilirim
+//servleti uzun sure kullanmazsm bu deðiþkenin deðeri silinebilir bir de tomcati aç kapa yapýnca
+//static deðiþken yaparsam instance yaratýlsa da vs bu deðiþken tutulur. sadece tomcat restart olunca sýfýlanýr
+
+
+http://localhost:8080/DenemeWebProjem/merhaba?adi=Meryem&soyadi=Gelen
+
+
+https://www.urlencoder.org/
+aðrý için a%C4%9Fr%C4%B1 yazýnca görür
+
+
+servlette türkçe karakter için doGet içine
+response.setCharacterEncoding("utf-8");
+
+//////////////////
+haftasonu ödevi proje yapýn 
+projede servlet çaðýr servlete sayý1 = 3 &sayý2 =6& islem=topla  adres çubuguna yaz bize cevabý döndürcek
+islem=cýkar islem=carp islem=bol
+
+
+
+//////
+intellisense noktadan sonra öneri gelmesi bu gruplamalar ide ile ilgili
+javada noktalý virgüle kadar tek satýr sanar.
+camel casing diðer kelimelerin baþ harfi büyük
+
+02032021
+
+ekranda deðiþikilk varsa servlette yapýlacak
+iþlem yoksa jspde yapýlacak
+
+welcome file listi nereye yönlendirirseniz projenin rootunu çaðýrýnca oraya yönlendirir
+///////////
+requestten session id mi tutar
+browser bunu cookie olarak saklar
+
+güvenlik olarak cookileri kapatýrsak bu durumda session id yi saklayamaz 
+bu sebeble biz de tüm linklerimizi c:url ile yazalým
+bu yönteme url rewriting denir
+
+<c:url value="/hesapla"/>
+
+
+
+
+///////////////////
+scope kavramýný dün servletin içinde bilgigöndermek için kullandýk
+page scope 
+request scope her request baðýmsýz çalýþýyor
+session scope ayný kiþini ayný bilgilere erilmesini saðlýyor timeout ya da logout olana dek ayn s
+application scope uygulama bazýnda sunucu kapanana dek silinmiyor mesela kaç kiþi girmiþ static deðiþken gibi düþünün 
+/////
+session//////    request.getServletContext().setAttribute("", "");
+application scopa eriþmek için/////		request.getSession().setAttribute("", "");
+		
+request scope ////////request.getRequestDispatcher("/sonuc.jsp").forward(request, response);
+
+bulamazsa bir üst scopeta arýyor sonuc diye çaðýrýrsak
+application.sonuc diye çaðýrýrsak direk application scope diye arar
+////////
+
+
+
+tag library
+5 tane temel 
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
+
+c:set
+c:out
+c:import
+
+
+
+
+
+isterseniz büyük projelerde jstl tag library yazarak yazabilirsiniz.
+/////
+
+
+Login projesi yapýp db yaratalým
+java ee tools altýndaki generate ile bbaþta xml yaratmayý unuttuysak sonradan yarataibiliriz
+
+
+new StringBuilder(adi).reverse().toString().equals(sifre);///bu true ise username ters þifre iile ayný
+
+
+
+//////
+Report
+
+Message HTTP method POST is not supported by this URL
+
+doGet yerine doPost olarak deðiþtirmeliyiz yoksa http post deklemiyor uyarýsý veriyor
+
+
+http://localhost:8081/LoginOrnegi/giris
+baþka tarayýcýda bunu çalýþtýrýnca þimdi de doGet ister onu da yazalým
+
+direk bu sayfaya izin vermesin
+http://localhost:8081/LoginOrnegi/menu.jsp
+
+session'a kaydolmasýný saðlayalým
+
+/////
+jsp de getSession setAtr yerine ${login}
+/////
+
+filteler
+lerden geçerse istek yapan yere yönledirir
+login olmadýgýnda giriþi engellicek loginifiltersesi yapalým
+hangi requestlerde arýcaný annotationlarla yapalým önce
+/menu/* 
+filteleri tümü için ara
+
+*. yýldýz nokta ile sonu html ilen biten herhangi bir istek yapýldýgýnda devreye girsin
+*.htm
+
+/* bu ise tüm requestler demek herhangi bir istek yapýldýgýnda bu filtre devreye girsin demek
+
+
+
+
+////jdbc framework ile driverý ekleyerek dbye nasýl baðlanacagýmýzý bilmesek de olur jdbc de getConnection methodu ile veritabanýna baðlantý ilgileri kullanýcý adý ve þifreyi girerek baðlantý saglayabiliyoruz
+"jdbc:mysql//localhost:3306
+3306 portu mysql sunucunun çalýþtýgý port
+
+10:13 4.03.2021
+
+
+f5 ve f6 step over ve step into debug modeda
+
+
+
+ALTER TABLE `harita`.`personel_adres` 
+ADD CONSTRAINT `personel_id_fk`
+  FOREIGN KEY ()
+  REFERENCES `harita`.`personel` ()
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+///////////////
+foreign keyleri hybernate te çift taraflý referans ile yapacagýz doðrusu bu 
+///
+	//db ekle sil vs yapacaksam; transaction ayný anda yapýlan iþlemlerin kümesi
+	// birden fazla iþlem ypacaksam söylemem lazým
+	// hangi sýra ile yapmam gerektiðini
+
+///
+public class Personel {
+	/// ekleme görüntüleme için deðil ama silmek için id ihtiyacým var
+	private int id;
+	private String tcKimlikNo;
+	private String adi;
+	private String soyadi;
+
+}
+
+
+//////
+
+Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/harita?serverTimezone=UTC", "root", "");
+	
+timezone hatasýný düzelt
+
+/////
+
+// null pointer exception olmasýn diye sabit deðer üzerinden eþitlik yazarýz!
+	String tip = request.getParameter("tip");
+		
+		if ("1".equals(tip)) {
+			// personel listesi istenmiþtir
+			List<Personel> personeller = new PersonelBusiness().getPersoneller();
+			request.setAttribute("liste", personeller);
+			request.getRequestDispatcher("/personelListesi.jsp").forward(request, response);
+
+		}
+
+
+
+
+/////
+http://localhost:8081/PersonelYonetim/personelListe
+
+
+
+	// private static Connection conn;//farklý db claslarým da kullanýr ama her kullanýcý kullanýr
+	// dolayýsýyla thread bazýnda saklayabilirsem her request için ayrý bir connection saðlamýþ olurum
+	// bunun için özel bir ThreadLocal<T> deðiþkeni tanýmlanmýþ
+	// benim connection sakla dediðim threade özel thread bazýnda saklýyor
+	// connectioný get ile çaðýrýp set ile içine yazdýracagýz
+	// static oldugu için her yerden eriþirim
+
+
+	private static ThreadLocal<Connection> conn = new ThreadLocal<Connection>();
+
+	// if ile db base bitane oldugu sürece ayný connectioný kullanacak bida bida yaratmayacagýz
+
+	try {
+			commit();// commit edilmeyi bekleyen biþey varsa commit edip öyle kapatacak
+			conn.get().close();// aldýgým connectionlarý kapatmamam ciddi sorunlara yol açar
+
+		conn.get().setAutoCommit(false);// hatalý iþlemleri geri almak için
+
+
+
+
+
+//////////////////////////
+connectioný businessda kapatacagýz
+
+business sadece iþi yapar ama iþin kendisini burda yapmýyoruz burda özet þeklinde yazýyoruz
+baþka classa yönlenidiriyoruz
+iþin kendisi ile ilgili kod yazmýyorsak 
+db'ye yönlendirir ve web servisi ordan çaðýrýrsak businessdan connection kapatmak mantýklý olmuyor
+iþte o yüzden connection için filtre yarattýk 
+
+//////
+970 5772 2639
+
+
+05032021
+
+
+
+/////////
+// sql incektion olmasýn diye ? iþareti verip stmt üzerinden set methodlarý ile
+// ilk soru iþaretitin yeri demek buradaki 1 // eriþelim? sqlde herþey birden baþlar
+// burda foreign key iliþkisi var her personelin birden fazla adresi oluþabiliyor
+				// hybernate hazýrlýk burasý önemli içeriði dbden okumak yerine elimdeki hazýr olan deðiþkeni kullandým çünkü içeriði ayný oldugu için
+			
+finally {
+			close(rs, stmt);// bu koddan kurtulmak için ne yapmalýyým bu kurallarý zorlayarak tecrübesiz yazýlýmcýya anlatmamýz lazým proje
+			// mimarisini
+// çaðýrmazsa açýk kalýr otomatik kapanmýyor
+// rs'nin db'de karþýlýk objesi var cursor deniyor next deyince getlerle cursor üzerinden çalýþýyor//
+// connecitoný kapatsam bile rs i kapatmayýnca o cursor bellek oluþturuyor her çalýþtýrdýgýmda kapatmadan cursorlar
+// birikiyor ve bellek yetmezzliði oluþturuyor yeni cursor oluþturamayýz
+// ve hiçbir sql çalýþtýramayýz
+//// bunun çözümü db'yi kapat aç yapýyor ama bu sorunu öteler bidaha oluþur cursor
+// hele hele connectioný kapatmazsak daha daha büyü sorun olur
+// þimdi bu yazýlýmcý hatlarýnýn önüne geçmek için frameworklar oluþturulmuz
+// filteden geçmeme ihtimali yok requestin açýk kalma ihtimali ortadan kalkar
+// kodu olabildiðince basit yazmaya çalýþacak projenin mimarisi bu
+// sonrasýnda ayný kodlarý yazarak ilerleyecegiz
+
+
+
+
+
+///DB Test
+package deneme;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class BaglantiTest {
+
+	public static void main(String[] args) {
+		try {
+			// new driver
+			// Class.forName("com.mysql.cj.jdbc.Driver");//java8 ile beraber java
+			// driverlerýný kendi kendine tanýtma özelliði gelmiþ
+
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/harita", "root", "");
+
+			PreparedStatement stmt = conn.prepareStatement("Select*from personel");
+			ResultSet rs = stmt.executeQuery();
+
+			while (rs.next()) {
+				String tcNo = rs.getString("tcno");
+				String adi = rs.getString("adi");
+				String soyadi = rs.getString("soyadi");
+
+				System.out.println(tcNo + "," + adi + "," + soyadi);
+
+			}
+			rs.close();
+			stmt.close();
+			conn.close();
+		} catch (Exception e) { /// classNotFoundException olmayacak
+
+			e.printStackTrace();
+		}
+
+	}
+
+}
+
+
+/////////////////8032021
+control d ile satýrlarý siliyorum
+
+
+
+///////
+https://code.visualstudio.com/docs/?dv=win64user
+https://github.com/coreybutler/nvm-windows/releases
+C:\Users\meryem.gelen\AppData\Roaming\nvm
+nvm list available
+nvm install 15.12.10
+nvm use 15.12.0
+https://angular.io/guide/setup-local
+npm install -g @angular/cli
+
+ng --version
+pwd
+cd /d/
+ls -l
+mkdir angular
+cd angular/
+$ ng new ilkProje
+$ rm -rf ilkProje/
+cd my-app
+ng serve --open
+
+ng g c sayfa3 -it -is
+npm start
+
+alt gr back tik boþluk `
+
+
+property bining 
+event binding 
+this ile eriþirim method içinde 
+towave binding [(ngModel)]
+
+
+ng serve 
+
+ng i 
+file prefences settings
+extensions 
+edit in setting json
+visual sttd code içinde setting.json
+
+Angular Essentials
+Angular Language Service
+Angular Snippets
+Auto Close Tag
+Auto Rename Tag
+JS-CSS-HTML Formatter
+Material Icon Theme
+SCSS IntelliSense
+Tabnine Autocomplete AI
+Winter is Coming Theme
+
+
+"editor.suggestOnTriggerCharacters": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Winter is Coming (Dark Black)",
+  "html.format.wrapLineLength": 0,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+ "editor.occurrencesHighlight": false,
+  "editor.matchBrackets": "near",
+  "editor.selectionHighlight": false,
+  "tabnine.experimentalAutoImports": true,
+  "editor.tokenColorCustomizations": null,
+  "editor.fontFamily": "Fira Code",
+  "editor.fontLigatures": true,
+  "window.zoomLevel": 1,
+  "html.format.maxPreserveNewLines": 800,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "workbench.commandPalette.history": 150,
+  "angular.experimental-ivy": true,
+  "editor.linkedEditing": true,
+  "scss.implicitlyLabel": ""
+
+
+
+
+
+
+///////////
+localhost:4300/personel
+localhost:4300/kitap
+iki tane componente iht var
+
+ng g c personel 
+ng build --prod
+//////
+fira font githubdan indir kur
+////
+post man kurduk
+
+tüm personel
+http://localhost:23000/personel
+tek bir personel (5 id'li)
+http://localhost:23000/personel/5
+adý Levent olan
+http://localhost:23000/personel/adi/Levent
+///
+$ ng new personelListesi --skip-tests=true
+//////////total commander kullanýmý
+alt f1
+f7 yeni dizin oluþtutur
+zipi açmadan düzeltir kaydeder
+boþluk ile dizin boyutuna baktýk
+//////////
+prifaces angular için
+npm install primeng --save
+npm install primeicons --save
+n
+//////////
+ng new validasyon --skip-tests=true
+ng add @ng-bootstrap/ng-bootstrap
+
+////
+
+kutuda muz [()] two wave binding
+FormsModule ekle app module
+primefacede form yazmayýnca çalýþmýyor angularda form yaýznca çalýþmýyor
+//////////////
